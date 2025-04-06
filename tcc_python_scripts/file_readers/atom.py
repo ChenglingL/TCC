@@ -64,7 +64,7 @@ class AtomSnapshot(Snapshot):
                     for i in range(self.num_particles):
                         particle_buffer.write(f.readline())
                     particle_buffer.seek(0)
-                    table = pandas.read_table(particle_buffer, index_col=0, sep='\s+', names=headings,
+                    table = pandas.read_table(particle_buffer, index_col=0, sep=r'\s+', names=headings,
                                               nrows=self.num_particles)
 
                     if 'xs' in headings:

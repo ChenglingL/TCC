@@ -199,3 +199,6 @@ class TCCWrapper:
         table = pandas.read_table(summary_file, index_col='Cluster type', skiprows=1, nrows=len(structures.cluster_list))
         table.fillna(0., inplace=True)
         return table
+    def __del__(self):
+        if self.working_directory:
+            shutil.rmtree(self.working_directory)

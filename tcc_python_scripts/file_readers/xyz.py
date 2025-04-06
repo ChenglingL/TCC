@@ -37,7 +37,7 @@ class XYZSnapshot(Snapshot):
                     raise SnapshotIncompleteError("Error reading XYZ file on line number {}".format(line_number))
                 string_buffer.write(line)
             string_buffer.seek(0)
-            table = pandas.read_table(string_buffer, sep='\s+', names=('atom', 'x', 'y', 'z'), nrows=number_of_particles)
+            table = pandas.read_table(string_buffer, sep=r'\s+', names=('atom', 'x', 'y', 'z'), nrows=number_of_particles)
             if table.shape[0] != number_of_particles:
                 raise SnapshotIncompleteError
             self.particle_coordinates = table[['x', 'y', 'z']].values.copy('c').astype(numpy.longdouble)

@@ -4,6 +4,8 @@
 #include <limits.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 #if defined(__linux__) || defined(__APPLE__)
     #include <sys/stat.h>

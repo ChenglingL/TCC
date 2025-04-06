@@ -3,6 +3,7 @@
 #include "bonds.h"
 #include "voronoi_bonds.h"
 #include "cell_list.h"
+#include <stdlib.h>
 
 void Get_Bonds_With_Voronoi() {
     int i, particle_1;
