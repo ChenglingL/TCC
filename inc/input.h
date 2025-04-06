@@ -4,6 +4,14 @@
 #include <stdio.h>
 #include "globals.h"
 
+// 🔧 Add this definition:
+struct xyz_info {
+    long total_frames;
+    long max_frames;
+    long* num_particles;
+    long* frame_offsets;
+};
+
 void read_ini_file();
 
 void read_clusters_to_analyse();
@@ -28,4 +36,4 @@ void get_coords_from_line(int frame_number, FILE *xyzfile, int particle);
 
 int check_frame_numbers(int num_xyz_frames);
 
-#endif
+#endif // INPUT_H

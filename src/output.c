@@ -3,6 +3,9 @@
 #include "output.h"
 #include "tools.h"
 #include "globals.h"
+#include <stdlib.h>  // for exit, qsort
+#include <stdio.h>   // for sprintf
+
 
 ////////// Raw Writing //////////
 

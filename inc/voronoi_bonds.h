@@ -1,5 +1,8 @@
 #ifndef TCC_VORONOI_BONDS_H
 #define TCC_VORONOI_BONDS_H
+#include <stdlib.h>  // for malloc, free
+
+#define EPS 1e-8     // or whatever value makes sense in your context
 
 void Get_Bonds_With_Voronoi();
 
